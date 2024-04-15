@@ -1,0 +1,118 @@
+<!-- emergency_connect.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Emergency Connect - Doctor AI{% endblock %}
+
+{% block content %}
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #4cafa0;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .container {
+            width: 70%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #4CAF50;
+            text-align: center; /* Center-align the heading */
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: justify; /* Justify-align the paragraphs */
+            margin-bottom: 20px;
+        }
+
+        .emergency-info {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .video-call-btn {
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            background-color: #f44242; /* Use a color suitable for your design */
+            transition: background-color 0.3s ease-in-out;
+            text-decoration: none; /* Remove underlines for the button */
+            display: inline-block;
+        }
+
+        .video-call-btn:hover {
+            filter: brightness(110%);
+        }
+
+        #logout-btn {
+            text-decoration:none;
+            background-color: #36f472;
+            padding: 15px 30px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            transition: background-color 0.3s ease-in-out;
+        }
+    </style>
+
+  
+        <h2>Emergency Connect</h2>
+
+    <div class="container">
+        <p>
+            In case of an emergency, please use the information below to connect with emergency services.
+            Time is crucial during emergencies, and immediate assistance can make a significant difference.
+        </p>
+
+        <div class="emergency-info">
+            <p><strong>Emergency Helpline:</strong> 108</p>
+            <p><strong>Local Emergency Services:</strong> [Your Local Emergency Number]</p>
+        </div>
+        <h2>Start Video Call</h2>
+        <a href="#" class="video-call-btn" onclick="startVideoCall('https://meet.google.com/ajh-xcwt-ukv')">Doctor 1</a>
+        <a href="#" class="video-call-btn" onclick="startVideoCall('https://meet.google.com/ajh-xcwt-ukv')">Doctor 2</a>
+        <a href="#" class="video-call-btn" onclick="startVideoCall('https://meet.google.com/ajh-xcwt-ukv')">Doctor 3</a>
+    </div>
+    <a href="{{ url_for('landing_page') }}" id="logout-btn">Back to Home</a>
+
+
+    <script>
+        function startVideoCall(link) {
+            window.location.href = link; 
+        }
+    </script>
+    <!-- <script>
+        function startVideoCall() {
+            window.location.href = 'https://meet.google.com/ajh-xcwt-ukv'; 
+        }
+        function startVideoCall2() {
+            window.location.href = 'https://meet.google.com/ajh-xcwt-ukv'; 
+        }
+        function startVideoCall3() {
+            window.location.href = 'https://meet.google.com/ajh-xcwt-ukv'; 
+        }
+    </script> -->
+{% endblock %}

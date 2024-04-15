@@ -1,0 +1,511 @@
+﻿Symptom,Condition,Severity
+Headache,Migraine,Moderate
+Headache,Tension headache,Mild
+Fever,Influenza,Moderate
+Fever,Dengue fever,Severe
+Joint pain,Rheumatoid arthritis,Severe
+Joint pain,Osteoarthritis,Moderate
+Skin rash,Eczema,Mild
+Skin rash,Psoriasis,Severe
+Nausea,Gastroenteritis,Moderate
+Nausea,Motion sickness,Mild
+Vomiting,Gastroenteritis,Moderate
+Vomiting,Food poisoning,Severe
+Fatigue,Chronic fatigue syndrome,Severe
+Fatigue,Anemia,Mild
+Cough,Common cold,Mild
+Cough,Pneumonia,Moderate
+Shortness of breath,Asthma,Moderate
+Shortness of breath,Chronic obstructive pulmonary disease,Severe
+Abdominal pain,Gastritis,Moderate
+Abdominal pain,Kidney stones,Severe
+Chest pain,Angina,Moderate
+Chest pain,Heart attack,Severe
+Dizziness,Vertigo,Moderate
+Dizziness,Orthostatic hypotension,Mild
+Sore throat,Strep throat,Moderate
+Sore throat,Common cold,Mild
+Diarrhea,Gastroenteritis,Severe
+Diarrhea,Food poisoning,Moderate
+Back pain,Herniated disc,Severe
+Back pain,Muscle strain,Moderate
+Chest tightness,Asthma,Moderate
+Chest tightness,Anxiety,Mild
+Fatigue,Fibromyalgia,Severe
+Fatigue,Depression,Moderate
+Nausea,Morning sickness,Mild
+Nausea,Appendicitis,Severe
+Vomiting,Morning sickness,Mild
+Vomiting,Appendicitis,Severe
+Fever,Common cold,Mild
+Fever,COVID-19,Severe
+Headache,Cluster headache,Severe
+Headache,Sinus headache,Mild
+Joint pain,Gout,Severe
+Joint pain,Fibromyalgia,Moderate
+Rash,Contact dermatitis,Mild
+Rash,Chickenpox,Severe
+Cough,Whooping cough,Severe
+Cough,Acute bronchitis,Moderate
+Shortness of breath,Pneumothorax,Severe
+Shortness of breath,Pulmonary embolism,Moderate
+Abdominal pain,Appendicitis,Severe
+Abdominal pain,IBS,Moderate
+Dizziness,Dehydration,Mild
+Dizziness,Migraine,Moderate
+Frequent urination,Urinary tract infection,Moderate
+Frequent urination,Diabetes mellitus,Severe
+Blurred vision,Diabetic retinopathy,Severe
+Blurred vision,Eye strain,Mild
+Chest pain,Heart attack,Severe
+Chest pain,GERD,Moderate
+Sweating,Hyperhidrosis,Mild
+Sweating,Anxiety,Moderate
+Numbness,Tarsal tunnel syndrome,Moderate
+Numbness,Peripheral neuropathy,Severe
+Loss of appetite,Gastroenteritis,Mild
+Loss of appetite,Depression,Moderate
+Difficulty sleeping,Insomnia,Moderate
+Difficulty sleeping,Sleep apnea,Severe
+Skin rash,Eczema,Mild
+Skin rash,Psoriasis,Severe
+Muscle weakness,Myasthenia gravis,Severe
+Muscle weakness,Fibromyalgia,Moderate
+Frequent headaches,Tension headache,Mild
+Frequent headaches,Migraine,Severe
+Abdominal bloating,Irritable bowel syndrome,Moderate
+Abdominal bloating,Food intolerance,Mild
+Dry cough,Allergic rhinitis,Mild
+Dry cough,COVID-19,Severe
+Shortness of breath,Asthma,Moderate
+Shortness of breath,Pneumonia,Severe
+Fatigue,Anemia,Mild
+Fatigue,Chronic fatigue syndrome,Severe
+Fever,Influenza,Severe
+Fever,COVID-19,Severe
+Chest tightness,Anxiety,Mild
+Chest tightness,Coronary artery disease,Severe
+Dizziness,Vertigo,Moderate
+Dizziness,Dehydration,Mild
+Back pain,Herniated disc,Moderate
+Back pain,Scoliosis,Mild
+Joint pain,Arthritis,Moderate
+Joint pain,Fibromyalgia,Severe
+Nausea,Gastritis,Mild
+Nausea,Migraine,Moderate
+Abdominal pain,Appendicitis,Severe
+Abdominal pain,IBS,Moderate
+Headache,Sinusitis,Mild
+Headache,Tension headache,Moderate
+Skin rash,Contact dermatitis,Mild
+Skin rash,Chickenpox,Severe
+Cough,Common cold,Mild
+Cough,Pneumonia,Severe
+Sore throat,Strep throat,Moderate
+Sore throat,Common cold,Mild
+Fatigue,Anemia,Mild
+Fatigue,Chronic fatigue syndrome,Severe
+Fever,Influenza,Severe
+Fever,COVID-19,Severe
+Chest pain,Angina,Moderate
+Chest pain,Heart attack,Severe
+Shortness of breath,Asthma,Moderate
+Shortness of breath,Pneumonia,Severe
+Dizziness,Vertigo,Moderate
+Dizziness,Dehydration,Mild
+Headache,Migraine,Moderate
+Headache,Sinusitis,Mild
+Joint pain,Arthritis,Moderate
+Joint pain,Fibromyalgia,Severe
+Nausea,Gastroenteritis,Mild
+Nausea,Motion sickness,Moderate
+Abdominal pain,Gastritis,Moderate
+Abdominal pain,Appendicitis,Severe
+Skin rash,Allergic reaction,Mild
+Skin rash,Psoriasis,Severe
+Dizziness,Hypotension,Moderate
+Dizziness,Labyrinthitis,Severe
+Nausea,Migraine,Mild
+Nausea,Food poisoning,Severe
+Abdominal pain,Kidney stones,Moderate
+Abdominal pain,Appendicitis,Severe
+Skin rash,Eczema,Mild
+Skin rash,Contact dermatitis,Moderate
+Back pain,Herniated disc,Moderate
+Back pain,Scoliosis,Severe
+Chest pain,Acid reflux,Mild
+Chest pain,Pneumothorax,Severe
+Shortness of breath,Chronic obstructive pulmonary disease,Severe
+Shortness of breath,Heart failure,Severe
+Fatigue,Anemia,Mild
+Fatigue,Chronic fatigue syndrome,Severe
+Headache,Tension headache,Moderate
+Headache,Sinus headache,Mild
+Joint pain,Gout,Moderate
+Joint pain,Rheumatoid arthritis,Severe
+Fever,Flu,Mild
+Fever,Malaria,Severe
+Sore throat,Strep throat,Moderate
+Sore throat,Common cold,Mild
+Cough,Common cold,Mild
+Cough,Influenza,Severe
+Fatigue,Influenza,Moderate
+Fatigue,Mononucleosis,Severe
+Nausea,Gastroenteritis,Mild
+Nausea,Pregnancy,Severe
+Headache,Sinusitis,Moderate
+Headache,Tension headache,Mild
+Fever,Viral infection,Mild
+Fever,COVID-19,Severe
+Abdominal pain,Appendicitis,Severe
+Abdominal pain,Food poisoning,Moderate
+Muscle pain,Influenza,Moderate
+Muscle pain,Fibromyalgia,Severe
+Chest pain,Angina,Moderate
+Chest pain,Myocardial infarction,Severe
+Shortness of breath,Asthma,Mild
+Shortness of breath,Pulmonary embolism,Severe
+Nasal congestion,Hay fever,Moderate
+Nasal congestion,Sinusitis,Mild
+Sneezing,Common cold,Mild
+Sneezing,Allergic rhinitis,Moderate
+Joint pain,Arthritis,Moderate
+Joint pain,Lupus erythematosus,Severe
+Dizziness,Vertigo,Mild
+Dizziness,Dehydration,Moderate
+Skin rash,Eczema,Mild
+Skin rash,Psoriasis,Moderate
+Difficulty swallowing,Pharyngitis,Mild
+Difficulty swallowing,Esophageal cancer,Severe
+Frequent urination,Urinary tract infection,Mild
+Frequent urination,Diabetes mellitus,Severe
+Bloating,IBS (Irritable bowel syndrome),Mild
+Bloating,Colon cancer,Severe
+Fatigue,Anemia,Moderate
+Fatigue,Chronic fatigue syndrome,Severe
+Shortness of breath,Asthma,Mild
+Shortness of breath,Chronic obstructive pulmonary disease (COPD),Severe
+Nausea,Gastritis,Mild
+Nausea,Gastroenteritis,Moderate
+Headache,Migraine,Moderate
+Headache,Tension headache,Mild
+Abdominal pain,Gastric ulcer,Mild
+Abdominal pain,Pancreatitis,Severe
+Cough,Pneumonia,Moderate
+Cough,Chronic bronchitis,Mild
+Fever,Influenza,Moderate
+Fever,COVID-19,Severe
+Muscle weakness,Fibromyalgia,Mild
+Muscle weakness,Multiple sclerosis,Severe
+Dizziness,Vertigo,Mild
+Dizziness,Dehydration,Moderate
+Chest pain,Angina,Moderate
+Chest pain,Heart attack,Severe
+Frequent urination,Diabetes,Moderate
+Frequent urination,Urinary tract infection,Mild
+Rash,Hives,Mild
+Rash,Eczema,Moderate
+Joint pain,Arthritis,Mild
+Joint pain,Lupus,Severe
+Vision changes,Glaucoma,Mild
+Vision changes,Cataracts,Severe
+Stomach cramps,Food poisoning,Moderate
+Stomach cramps,Irritable bowel syndrome,Mild
+Memory loss,Alzheimer's disease,Severe
+Memory loss,Depression,Moderate
+Fever,Influenza,Moderate
+Fever,COVID-19,Severe
+Cough,Common cold,Mild
+Cough,Pneumonia,Moderate
+Headache,Migraine,Moderate
+Headache,Tension headache,Mild
+Nausea,Stomach flu,Mild
+Nausea,Motion sickness,Moderate
+Fatigue,Anemia,Mild
+Fatigue,Chronic fatigue syndrome,Severe
+Shortness of breath,Asthma,Moderate
+Shortness of breath,Chronic obstructive pulmonary disease,Severe
+Abdominal pain,Gastritis,Mild
+Abdominal pain,Appendicitis,Severe
+Back pain,Herniated disc,Moderate
+Back pain,Scoliosis,Mild
+Sore throat,Strep throat,Moderate
+Sore throat,Common cold,Mild
+Muscle pain,Flu,Moderate
+Muscle pain,Fibromyalgia,Severe
+Dizziness,Vertigo,Mild
+Dizziness,Migraine,Moderate
+Runny nose,Hay fever,Mild
+Runny nose,Common cold,Moderate
+Joint pain,Arthritis,Moderate
+Joint pain,Lupus,Severe
+Rash,Contact dermatitis,Mild
+Rash,Psoriasis,Moderate
+Vomiting,Gastroenteritis,Mild
+Vomiting,Food poisoning,Moderate
+Diarrhea,Irritable bowel syndrome,Moderate
+Diarrhea,Gastroenteritis,Severe
+Headache,Tension headache,Mild
+Headache,Migraine,Moderate
+Fever,Influenza,Severe
+Fever,COVID-19,Moderate
+Cough,Common cold,Mild
+Cough,Bronchitis,Moderate
+Fatigue,Anemia,Mild
+Fatigue,Chronic fatigue syndrome,Severe
+Shortness of breath,Asthma,Moderate
+Shortness of breath,Pneumonia,Severe
+Chest pain,Angina,Moderate
+Chest pain,Heart attack,Severe
+Abdominal pain,Gastritis,Mild
+Abdominal pain,Kidney stones,Moderate
+Nausea,Gastroenteritis,Mild
+Nausea,Morning sickness,Moderate
+Dizziness,Vertigo,Mild
+Dizziness,Motion sickness,Moderate
+Back pain,Herniated disc,Moderate
+Back pain,Sciatica,Severe
+Joint pain,Arthritis,Moderate
+Joint pain,Lupus,Severe
+Skin rash,Eczema,Mild
+Skin rash,Psoriasis,Moderate
+Sore throat,Strep throat,Mild
+Sore throat,Mononucleosis,Moderate
+Nasal congestion,Allergic rhinitis,Mild
+Nasal congestion,Sinusitis,Moderate
+Difficulty swallowing,Esophagitis,Moderate
+Difficulty swallowing,Throat cancer,Severe
+Loss of appetite,Anorexia nervosa,Moderate
+Loss of appetite,Hyperthyroidism,Severe
+Fatigue,Chronic fatigue syndrome,Moderate
+Fatigue,Anemia,Mild
+Nausea,Gastritis,Moderate
+Nausea,Pregnancy,Severe
+Cough,Common cold,Mild
+Cough,Pneumonia,Severe
+Fever,Influenza,Moderate
+Fever,COVID-19,Severe
+Headache,Tension headache,Mild
+Headache,Migraine,Severe
+Shortness of breath,Asthma,Moderate
+Shortness of breath,Chronic obstructive pulmonary disease,Severe
+Chest pain,Angina,Moderate
+Chest pain,Heart attack,Severe
+Abdominal pain,Gastric ulcer,Moderate
+Abdominal pain,Appendicitis,Severe
+Dizziness,Vertigo,Moderate
+Dizziness,Dehydration,Mild
+Rash,Eczema,Mild
+Rash,Allergic reaction,Severe
+Sore throat,Strep throat,Moderate
+Sore throat,Common cold,Mild
+Difficulty swallowing,Esophageal stricture,Severe
+Difficulty swallowing,GERD,Moderate
+Joint pain,Rheumatoid arthritis,Severe
+Joint pain,Osteoarthritis,Moderate
+Back pain,Herniated disc,Severe
+Back pain,Muscle strain,Moderate
+Skin lesion,Basal cell carcinoma,Severe
+Skin lesion,Acne,Mild
+Constipation,Constipation,Moderate
+Constipation,Irritable bowel syndrome,Mild
+Fever,Influenza,Severe
+Fever,Common cold,Moderate
+Cough,Pneumonia,Severe
+Cough,Bronchitis,Moderate
+Headache,Migraine,Severe
+Headache,Tension headache,Mild
+Fatigue,Chronic fatigue syndrome,Severe
+Fatigue,Anemia,Moderate
+Nausea,Gastroenteritis,Moderate
+Nausea,Motion sickness,Mild
+Abdominal pain,Appendicitis,Severe
+Abdominal pain,Gastritis,Moderate
+Shortness of breath,Asthma,Severe
+Shortness of breath,Anxiety,Moderate
+Chest pain,Myocardial infarction,Severe
+Chest pain,Heartburn,Mild
+Sore throat,Strep throat,Severe
+Sore throat,Common cold,Moderate
+Rash,Chickenpox,Severe
+Rash,Allergic reaction,Moderate
+Back pain,Herniated disc,Severe
+Back pain,Muscle strain,Moderate
+Joint pain,Rheumatoid arthritis,Severe
+Joint pain,Osteoarthritis,Moderate
+Vomiting,Gastroenteritis,Severe
+Vomiting,Food poisoning,Moderate
+Dizziness,Vertigo,Severe
+Dizziness,Dehydration,Mild
+Fatigue,Anemia,Moderate
+Fatigue,Chronic fatigue syndrome,Severe
+Cough,Pneumonia,Severe
+Cough,Common cold,Mild
+Fever,Influenza,Severe
+Fever,COVID-19,Moderate
+Headache,Migraine,Severe
+Headache,Tension headache,Moderate
+Nausea,Gastritis,Moderate
+Nausea,Morning sickness,Mild
+Dizziness,Vertigo,Moderate
+Dizziness,Migraine,Severe
+Chest pain,Heart attack,Severe
+Chest pain,Angina,Moderate
+Shortness of breath,Asthma,Moderate
+Shortness of breath,Pneumothorax,Severe
+Abdominal pain,Gastritis,Moderate
+Abdominal pain,Appendicitis,Severe
+Back pain,Herniated disc,Severe
+Back pain,Muscle strain,Mild
+Headache,Migraine,Moderate
+Headache,Tension headache,Mild
+Fever,Influenza,Moderate
+Fever,Malaria,Severe
+Nausea,Gastroenteritis,Mild
+Nausea,Food poisoning,Severe
+Fatigue,Anemia,Moderate
+Fatigue,Chronic fatigue syndrome,Severe
+Rash,Allergic reaction,Mild
+Rash,Psoriasis,Severe
+Cough,Common cold,Mild
+Cough,Pneumonia,Severe
+Sore throat,Strep throat,Moderate
+Sore throat,Mononucleosis,Mild
+Difficulty breathing,Asthma,Moderate
+Difficulty breathing,Chronic obstructive pulmonary disease,Severe
+Chest pain,Heart attack,Severe
+Chest pain,Angina,Moderate
+Dizziness,Vertigo,Moderate
+Dizziness,Motion sickness,Mild
+Headache,Migraine,Moderate
+Headache,Tension headache,Mild
+Fever,Influenza,Severe
+Fever,Malaria,Moderate
+Nausea,Viral gastroenteritis,Mild
+Nausea,Food poisoning,Severe
+Abdominal pain,Appendicitis,Severe
+Abdominal pain,Gastritis,Moderate
+Fatigue,Anemia,Mild
+Fatigue,Chronic fatigue syndrome,Severe
+Cough,Common cold,Mild
+Cough,Pneumonia,Severe
+Shortness of breath,Asthma,Moderate
+Shortness of breath,Chronic obstructive pulmonary disease,Severe
+Chest pain,Heart attack,Severe
+Chest pain,Acid reflux,Mild
+Dizziness,Vertigo,Moderate
+Dizziness,Dehydration,Mild
+Sore throat,Strep throat,Severe
+Sore throat,Common cold,Mild
+Fever,Influenza,Severe
+Fever,Malaria,Severe
+Headache,Migraine,Moderate
+Headache,Tension headache,Mild
+Fatigue,Anemia,Moderate
+Fatigue,Chronic fatigue syndrome,Severe
+Nausea,Gastroenteritis,Moderate
+Nausea,Motion sickness,Mild
+Vomiting,Food poisoning,Severe
+Vomiting,Pregnancy,Mild
+Cough,Pneumonia,Severe
+Cough,Common cold,Mild
+Shortness of breath,Asthma,Moderate
+Shortness of breath,Chronic obstructive pulmonary disease (COPD),Severe
+Sore throat,Strep throat,Severe
+Sore throat,Common cold,Mild
+Chest pain,Heart attack,Severe
+Chest pain,Angina,Moderate
+Dizziness,Vertigo,Moderate
+Dizziness,Dehydration,Mild
+Fever,Malaria,Severe
+Fever,Common cold,Mild
+Fatigue,Anemia,Moderate
+Fatigue,Chronic fatigue syndrome,Severe
+Headache,Migraine,Severe
+Headache,Tension headache,Mild
+Nausea,Gastroenteritis,Severe
+Nausea,Motion sickness,Mild
+Vomiting,Food poisoning,Severe
+Vomiting,Indigestion,Moderate
+Abdominal pain,Appendicitis,Severe
+Abdominal pain,Stomach ulcer,Moderate
+Joint pain,Rheumatoid arthritis,Severe
+Joint pain,Osteoarthritis,Moderate
+Muscle pain,Influenza,Severe
+Muscle pain,Fibromyalgia,Moderate
+Cough,Bronchitis,Moderate
+Cough,Asthma,Mild
+Shortness of breath,Lung cancer,Severe
+Shortness of breath,Chronic bronchitis,Moderate
+Sore throat,Pharyngitis,Severe
+Sore throat,Acid reflux,Mild
+Chest pain,Angina,Severe
+Chest pain,GERD,Moderate
+Dizziness,Vertigo,Severe
+Dizziness,Anemia,Moderate
+Fainting,Hypoglycemia,Severe
+Fainting,Dehydration,Moderate
+Rash,Chickenpox,Severe
+Rash,Eczema,Mild
+Itching,Scabies,Severe
+Itching,Dermatitis,Moderate
+Diarrhea,Gastroenteritis,Severe
+Diarrhea,Irritable bowel syndrome,Moderate
+Constipation,Colon cancer,Severe
+Constipation,Hemorrhoids,Mild
+Bloating,IBS,Severe
+Bloating,Gas,Moderate
+Weight loss,Cancer,Severe
+Weight loss,Hyperthyroidism,Moderate
+Anxiety,Panic disorder,Severe
+Anxiety,Generalized anxiety disorder,Moderate
+Depression,Major depressive disorder,Severe
+Depression,Seasonal affective disorder,Moderate
+Insomnia,Insomnia disorder,Severe
+Insomnia,Stress,Moderate
+Fever,Influenza,Severe
+Fever,Common cold,Mild
+Cough,Pneumonia,Severe
+Cough,Asthma,Moderate
+Headache,Migraine,Severe
+Headache,Tension headache,Mild
+Nausea,Gastroenteritis,Severe
+Nausea,Food poisoning,Moderate
+Vomiting,Viral gastroenteritis,Severe
+Vomiting,Indigestion,Mild
+Abdominal pain,Appendicitis,Severe
+Abdominal pain,Stomach ulcer,Moderate
+Joint pain,Arthritis,Severe
+Joint pain,Joint injury,Mild
+Muscle pain,Fibromyalgia,Severe
+Muscle pain,Influenza,Moderate
+Fatigue,Chronic fatigue syndrome,Severe
+Fatigue,Anemia,Mild
+Shortness of breath,COPD,Severe
+Shortness of breath,Asthma,Moderate
+Sore throat,Strep throat,Severe
+Sore throat,Common cold,Mild
+Chest pain,Heart attack,Severe
+Chest pain,GERD,Moderate
+Dizziness,Vertigo,Severe
+Dizziness,Dehydration,Mild
+Fainting,Hypoglycemia,Severe
+Fainting,Vasovagal syncope,Moderate
+Rash,Allergic reaction,Severe
+Rash,Eczema,Moderate
+Itching,Scabies,Severe
+Itching,Dermatitis,Moderate
+Diarrhea,Gastroenteritis,Severe
+Diarrhea,IBS,Moderate
+Constipation,Colon cancer,Severe
+Constipation,Hemorrhoids,Mild
+Bloating,IBS,Severe
+Bloating,Gas,Moderate
+Weight loss,Cancer,Severe
+Weight loss,Thyroid disorder,Moderate
+Anxiety,Panic disorder,Severe
+Anxiety,Generalized anxiety disorder,Moderate
+Depression,Major depressive disorder,Severe
+Depression,Seasonal affective disorder,Moderate
+Insomnia,Insomnia disorder,Severe
+Insomnia,Stress,Moderate

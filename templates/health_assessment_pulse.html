@@ -1,0 +1,158 @@
+<!-- health_assessment_pulse.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Pulse Measurement - Doctor AI{% endblock %}
+
+{% block content %}
+    <style>
+        /* Include necessary styles for progress bar, timer, and page layout */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #4285f4;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .container {
+            width: 70%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #4CAF50;
+            text-align: center;
+        }
+
+        .progress {
+            height: 20px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 50%; /* Adjust the width based on the progress */
+            background-color: #4CAF50; /* Adjust the color based on your design */
+            transition: width 0.5s ease-in-out;
+        }
+
+        .timer {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 20px;
+            display: none;
+        }
+
+        #start_measure {
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            background-color: #4285f4;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        #start_measure:hover {
+            filter: brightness(110%);
+        }
+
+        #next_button {
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            background-color: #4CAF50;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        #next_button:hover {
+            filter: brightness(110%);
+        }
+    </style>
+
+  
+        <h2>Pulse Measurement</h2>
+ 
+
+    <div class="container">
+        <!-- Progress Bar -->
+        <div class="progress">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <!-- Timer Display -->
+        <div class="timer" id="timer">Time Remaining: 1:00</div>
+
+        <!-- Start Measure Button -->
+        <button id="start_measure">Start Measure</button>
+
+        <!-- Input Form (Hidden initially) -->
+        <form action="{{ url_for('pulse_measurement') }}" method="post" id="pulse_form" style="display: none;">
+            <!-- Add the 'name' attribute to input fields -->
+            <label for="pulse">Pulse Rate:</label>
+            <input type="text" id="pulse" name="pulse" required>
+
+            <!-- Next Button -->
+            <button id="next_button" type="submit">Next</button>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript code for handling the timer, form display, and progress bar
+        document.addEventListener('DOMContentLoaded', function () {
+            const startMeasureBtn = document.getElementById('start_measure');
+            const timerDisplay = document.getElementById('timer');
+            const pulseForm = document.getElementById('pulse_form');
+            const progressBar = document.getElementById('progress-bar');
+
+            startMeasureBtn.addEventListener('click', function () {
+                // Show timer, hide button, and start progress
+                timerDisplay.style.display = 'block';
+                startMeasureBtn.style.display = 'none';
+                progressBar.style.width = '50%'; // Initial progress
+
+                // Set a 1-minute timer
+                let seconds = 2;
+                const timerInterval = setInterval(function () {
+                    const minutes = Math.floor(seconds / 60);
+                    const remainingSeconds = seconds % 60;
+
+                    timerDisplay.textContent = `Time Remaining: ${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+
+                    if (seconds <= 0) {
+                        // Hide timer and show the input form
+                        clearInterval(timerInterval);
+                        timerDisplay.style.display = 'none';
+                        pulseForm.style.display = 'block';
+                    }
+
+                    seconds--;
+                }, 1000); // Update every 1000 milliseconds (1 second)
+            });
+
+            // Handle progress bar update when submitting the form
+            pulseForm.addEventListener('submit', function () {
+                progressBar.style.width = '75%'; // Adjust based on the progress
+            });
+        });
+    </script>
+{% endblock %}

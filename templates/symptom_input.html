@@ -1,0 +1,165 @@
+<!-- symptom_input.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Symptom Input - Doctor AI{% endblock %}
+
+{% block content %}
+    <style>
+        /* Include necessary styles for page layout */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #4285f4;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #4CAF50;
+            text-align: center;
+        }
+
+        .symptom-buttons {
+            margin-bottom: 20px;
+        }
+
+        .symptom-buttons button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            background-color: #4285f4;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .symptom-buttons button:hover {
+            filter: brightness(110%);
+        }
+
+        .severity-buttons {
+            margin-bottom: 20px;
+        }
+
+        .severity-buttons button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            background-color: #4285f4;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .severity-buttons button:hover {
+            filter: brightness(110%);
+        }
+
+        .selected-symptom {
+            font-weight: bold;
+        }
+        .selected-severity {
+            font-weight: bold;
+        }
+        .submit-button{
+            padding: 15px 30px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            background-color: #f44277;
+            transition: background-color 0.3s ease-in-out;
+        }
+    </style>
+
+    <h2>Please Select Your Symptom and Severity</h2>
+
+    <div class="container">
+        <div class="symptom-buttons">
+            <button onclick="selectSymptom('Fever')">Fever</button>
+            <button onclick="selectSymptom('Runny Nose')">Runny Nose</button>
+            <button onclick="selectSymptom('Diarrhea')">Diarrhea</button>
+            <button onclick="selectSymptom('Cough')">Cough</button>
+            <button onclick="selectSymptom('Cough')">Cough</button>
+            <button onclick="selectSymptom('Cough')">Cough</button>
+            <button onclick="selectSymptom('Cough')">Cough</button>
+            <button onclick="selectSymptom('Cough')">Cough</button>
+            <button onclick="selectSymptom('Cough')">Cough</button>
+            <button onclick="selectSymptom('Cough')">Cough</button>
+            <button onclick="selectSymptom('Cough')">Cough</button>
+            <button onclick="selectSymptom('Cough')">Cough</button>
+            <button onclick="selectSymptom('Cough')">Cough</button>
+            <button onclick="selectSymptom('Cough')">Cough</button>
+            <button onclick="selectSymptom('Cough')">Cough</button>
+            <button onclick="selectSymptom('Cough')">Cough</button>
+            <button onclick="selectSymptom('Cough')">Cough</button>
+            <button onclick="selectSymptom('Cough')">Cough</button>
+            <button onclick="selectSymptom('Cough')">Cough</button>
+            <button onclick="selectSymptom('Cough')">Cough</button>
+            <button onclick="selectSymptom('Cough')">Cough</button>
+            <button onclick="selectSymptom('Cough')">Cough</button>
+            <button onclick="selectSymptom('Cough')">Cough</button>
+            <button onclick="selectSymptom('Cough')">Cough</button>
+            <button onclick="selectSymptom('Cough')">Cough</button>
+            <button onclick="selectSymptom('Cough')">Cough</button>
+            <button onclick="selectSymptom('Cough')">Cough</button>
+            <button onclick="selectSymptom('Cough')">Cough</button>
+            <button onclick="selectSymptom('Cough')">Cough</button>
+            <button onclick="selectSymptom('Cough')">Cough</button>
+            <button onclick="selectSymptom('Cough')">Cough</button>
+            <button onclick="selectSymptom('Cough')">Cough</button>
+            <!-- Add more symptom buttons as needed -->
+        </div>
+
+        <div class="severity-buttons">
+            <button onclick="selectSeverity('Mild')" style="background-color: #42f463;">Mild</button>
+            <button onclick="selectSeverity('Moderate')" style="background-color: #d9f442;">Moderate</button>
+            <button onclick="selectSeverity('Severe')" style="background-color: #f44242;">Severe</button>
+        </div>
+
+        <div class="selected-symptom" id="selectedSymptom"></div>
+        <div class="selected-severity" id="selectedSeverity"></div>
+
+        <form action="{{ url_for('diagnosis_results') }}" method="post" id="symptomForm">
+            <input type="hidden" name="selectedSymptom" id="hiddenSymptom">
+            <input type="hidden" name="selectedSeverity" id="hiddenSeverity">
+            <button type="submit" class="submit-button">Next</button>
+        </form>
+    </div>
+
+    <script>
+        function selectSymptom(symptom) {
+            document.getElementById('selectedSymptom').innerHTML = 'Selected Symptom: ' + symptom;
+            document.getElementById('hiddenSymptom').value = symptom;
+        }
+
+        function selectSeverity(severity) {
+            document.getElementById('selectedSeverity').innerHTML = 'Selected Severity: ' + severity;
+            document.getElementById('hiddenSeverity').value = severity;
+        }
+    </script>
+{% endblock %}

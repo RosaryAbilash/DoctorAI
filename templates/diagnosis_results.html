@@ -1,0 +1,97 @@
+<!-- diagnosis_results.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Diagnosis Results - Doctor AI{% endblock %}
+
+{% block content %}
+<style>
+    .container {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .box {
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    h1, h2 {
+        text-align: center;
+    }
+
+    .result-list {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .result-item {
+        margin-bottom: 10px;
+        margin-right: 10px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .disease1 { background-color: #28a745; color: #fff; }
+    .disease2 { background-color: #007bff; color: #fff; }
+    .disease3 { background-color: #dc3545; color: #fff; }
+
+    .severity-box {
+        background-color: #cce5ff;
+        border: 1px solid #b8daff;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .recommendation {
+        margin-top: 10px;
+    }
+
+    .emergency-button {
+        display: block;
+        width: 100%;
+        text-align: center;
+        background-color: #dc3545;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 0;
+        text-decoration: none;
+    }
+</style>
+
+<div class="container">
+    <h1>Diagnosis Results</h1>
+
+    <div class="box">
+        <h2>Predicted Diseases</h2>
+        <ul class="result-list">
+            {% for result in results %}
+            <li class="result-item disease{{ loop.index }}">{{ result.disease }} - Probability: {{ result.probability }}%</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="box">
+        <h2>Severity Level</h2>
+        <div class="severity-box">
+            <strong>Highest Severity Level:</strong> {{ most_sever }}
+        </div>
+    </div>
+
+    <div class="box">
+        <h2>Recommendation</h2>
+        <p class="recommendation">Based on the severity level, it is recommended to consult with a doctor for further evaluation and treatment.</p>
+    </div>
+
+    <div class="box">
+        <a href="/emergency_connect" class="emergency-button">Emergency Connect</a>
+    </div>
+</div>
+{% endblock %}

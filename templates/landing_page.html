@@ -1,0 +1,85 @@
+<!-- landing_page.html -->
+
+
+{% block content %}
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #4cafa0;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        section {
+            padding: 50px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 200px;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .signup-btn {
+            background-color: #4CAF50;
+        }
+
+        .signin-btn {
+            background-color: #333;
+        }
+
+        .emergency-btn {
+            background-color: #ff3333;
+        }
+
+        .about-btn {
+            background-color: #4285f4;
+        }
+
+        button:hover {
+            filter: brightness(110%);
+        }
+    </style>
+
+    <header>
+        <p>Welcome to our DoctorAI healthcare platform.</p>
+        <img class="logo" src="{{ url_for('static', filename='DoctorAI_1.png') }}" alt="AI Healthcare Platform Logo">
+    </header>
+
+    <section>
+        <a href="{{ url_for('dashboard') }}"><button class="signup-btn">Start Diagnosis</button></a>
+        <a href="{{ url_for('emergency_connect') }}"><button class="emergency-btn">Emergency Connect</button></a>
+        <a href="{{ url_for('about_us') }}"><button class="about-btn">About Us</button></a>
+    </section>
+    <footer>
+        <p>Copyright &copy; 2024 DoctorAI - Rural Healthcare with AI-Enabled Kiosks</p>
+    </footer>
+{% endblock %}

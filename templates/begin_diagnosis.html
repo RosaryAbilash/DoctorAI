@@ -1,0 +1,70 @@
+<!-- begin_diagnosis.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Preliminary Diagnosis - Doctor AI{% endblock %}
+
+{% block content %}
+    <style>
+        /* Include necessary styles for page layout */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #4285f4;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .container {
+            width: 70%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #4CAF50;
+            text-align: center;
+        }
+
+        .button-container {
+            text-align: center;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            background-color: #4285f4;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            filter: brightness(110%);
+        }
+    </style>
+
+    <h2>Welcome to Preliminary Diagnosis</h2>
+
+    <div class="container">
+        <h1>Tell us How You Feel!..</h1>
+        
+        <!-- Redirect to the symptom input form -->
+        <div class="button-container">
+            <a href="{{ url_for('symptom_input') }}"><button>Enter Symptoms</button></a>
+        </div>
+    </div>
+{% endblock %}
