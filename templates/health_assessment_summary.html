@@ -83,17 +83,30 @@
 
         <div class="summary">
             <div class="vitals">Measured Vitals:</div>
-            <p><strong>BP:</strong> {{ summary['systolic'] }} / {{ summary['diastolic'] }}</p>
             <p><strong>Pulse:</strong> {{ summary['pulse'] }}</p>
             <p><strong>Body Temperature:</strong> {{ summary['body_temperature'] }}</p>
-            <p><strong>Height:</strong> {{ summary['height'] }}</p>
-            <p><strong>Weight:</strong> {{ summary['weight'] }}</p>
         </div>
 
-        <div class="bmi">
-            <p><strong>BMI:</strong> {{ bmi }}</p>
-        </div>
 
         <a href="{{ url_for('begin_preliminary_diagnosis') }}"><button>Start Diagnosis</button></a>
     </div>
+    <script>
+        window.onload = function() {
+            var selectedLanguage = "{{ session.get('language') }}"; // Get the selected language from the Flask session, defaulting to 'english'
+            var audioFilePath;
+    
+            // Determine the audio file path based on the selected language
+            if (selectedLanguage === 'english') {
+                audioFilePath = "{{ url_for('static', filename='audio/ENG_Summary_1.mp3') }}";
+            } else if (selectedLanguage === 'tamil') {
+                audioFilePath = "{{ url_for('static', filename='audio/TAM_Summary_1.mp3') }}";
+            }
+    
+            // Create an Audio object with the selected audio file path and play it
+            audio = new Audio(audioFilePath);
+            audio.loop = true;
+            audio.play();
+
+        };
+    </script>
 {% endblock %}

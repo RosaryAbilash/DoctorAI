@@ -98,17 +98,59 @@
         <!-- Start Measure Button -->
         <button id="start_measure">Start Measure</button>
 
+        
         <!-- Input Form (Hidden initially) -->
         <form action="{{ url_for('temperature_measurement') }}" method="post" id="temperature_form" style="display: none;">
-            <!-- Add the 'name' attribute to input fields -->
-            <label for="body_temperature">Body Temperature:</label>
-            <input type="text" id="body_temperature" name="body_temperature" required>
-
+            <!-- <label for="body_temperature">Body Temperature:</label>
+            <input type="text" id="body_temperature" name="body_temperature" required> -->
+            <h2 >Temperature Measured Successfully..</h2>
             <button type="submit" id="next_button">Next</button>
+            
         </form>
     </div>
 
     <script>
+
+        var selectedLanguage = "{{ session.get('language') }}"; // Get the selected language from the Flask session, defaulting to 'english'
+        var audio;
+
+        // Function to play start measure audio
+        function playStartMeasureAudio() {
+                // Stop any currently playing audio
+                if (audio) {
+                    audio.pause();
+                }
+                
+                var audioFilePath;
+                if (selectedLanguage === 'english') {
+                    audioFilePath = "{{ url_for('static', filename='audio/ENG_PROCESS.mp3') }}";
+                } else if (selectedLanguage === 'tamil') {
+                    audioFilePath = "{{ url_for('static', filename='audio/TAM_PROCESS.mp3') }}";
+                }
+                audio = new Audio(audioFilePath);
+                audio.loop = true;
+                audio.play();
+            }
+
+            // Function to play end measure audio
+        function playEndMeasureAudio() {
+                // Stop any currently playing audio
+                if (audio) {
+                    audio.pause();
+                }
+                
+                var audioFilePath;
+                if (selectedLanguage === 'english') {
+                    audioFilePath = "{{ url_for('static', filename='audio/ENG_NEXT.mp3') }}";
+                } else if (selectedLanguage === 'tamil') {
+                    audioFilePath = "{{ url_for('static', filename='audio/TAM_NEXT.mp3') }}";
+                }
+                audio = new Audio(audioFilePath);
+                audio.loop = true;
+                audio.play();
+            }
+
+
         // JavaScript code for handling the timer and form display
         document.addEventListener('DOMContentLoaded', function () {
             const startMeasureBtn = document.getElementById('start_measure');
@@ -120,8 +162,10 @@
                 timerDisplay.style.display = 'block';
                 startMeasureBtn.style.display = 'none';
 
+                playStartMeasureAudio();
+
                 // Set a 1-minute timer
-                let seconds = 2;
+                let seconds = 5;
                 const timerInterval = setInterval(function () {
                     const minutes = Math.floor(seconds / 60);
                     const remainingSeconds = seconds % 60;
@@ -133,6 +177,8 @@
                         clearInterval(timerInterval);
                         timerDisplay.style.display = 'none';
                         temperatureForm.style.display = 'block';
+                        // Play end measure audio
+                        playEndMeasureAudio();
                     }
 
                     seconds--;
@@ -140,4 +186,23 @@
             });
         });
     </script>
+    <script>
+                window.onload = function() {
+                    var selectedLanguage = "{{ session.get('language') }}"; // Get the selected language from the Flask session, defaulting to 'english'
+                    var audioFilePath;
+            
+                    // Determine the audio file path based on the selected language
+                    if (selectedLanguage === 'english') {
+                        audioFilePath = "{{ url_for('static', filename='audio/ENG_temp_1.mp3') }}";
+                    } else if (selectedLanguage === 'tamil') {
+                        audioFilePath = "{{ url_for('static', filename='audio/TAM_temp_1.mp3') }}";
+                    }
+            
+                    // Create an Audio object with the selected audio file path and play it
+                    audio = new Audio(audioFilePath);
+                    audio.loop = true;
+                    audio.play();
+    
+                };
+            </script>
 {% endblock %}

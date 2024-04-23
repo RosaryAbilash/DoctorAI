@@ -4,6 +4,7 @@ from flask_mail import Mail, Message
 from flask_session import Session
 import joblib
 import model
+import random
 
 
 app = Flask(__name__)
@@ -39,6 +40,13 @@ class User(db.Model):
 
 
 
+
+@app.route('/pulse_test')
+def pulse_test():
+    return render_template("pulse_test.html")
+
+
+
 @app.route('/debug_session')
 def debug_session():
     print(session)
@@ -50,8 +58,10 @@ def clear_session():
     print(session)
     return "SESSION CLEARED SUCCESSFULLY...."
 
-@app.route('/')
+@app.route('/', methods=['POST', 'GET'])
 def landing_page():
+    if request.method == 'POST':
+        session['language'] = request.form['language']
     return render_template('landing_page.html')
 
 @app.route('/voice')
@@ -137,6 +147,7 @@ def logout():
 def dashboard():
     # Assume user is logged in, and user data is available in the session
     user = session.get('user')
+    print("SELECTED LANGUAGE",session.get('language'))
     if user:
         return render_template('dashboard.html', user=user)
     else:
@@ -147,11 +158,8 @@ def dashboard():
 def check_session_data():
     if 'health_data' not in session:
         session['health_data'] = {
-            'systolic': "",
-            'diastolic': "",
             'pulse': "",
-            'height': "",
-            'weight': ""
+            'body_temperature' : ""
         }
 
 @app.route('/begin_health_assessment')
@@ -160,7 +168,7 @@ def begin_health_assessment():
     check_session_data()
     
     # Redirect to the BP measurement page
-    return redirect(url_for('bp_measurement'))
+    return redirect(url_for('pulse_measurement'))
 
 
 @app.route('/bp_measurement', methods=['GET', 'POST'])
@@ -195,11 +203,16 @@ def pulse_measurement():
 @app.route('/temperature_measurement', methods=['GET', 'POST'])
 def temperature_measurement():
     check_session_data()
+    temperature = random.uniform(97, 100)
+    session['health_data']['body_temperature'] = round(temperature, 2)
+    print(session['health_data'])
 
     if request.method == 'POST':
-        session['health_data']['body_temperature'] = request.form['body_temperature']
-        print(session['health_data'])
-        return render_template('health_assessment_height_weight.html')
+        # session['health_data']['body_temperature'] = request.form['body_temperature']
+        # print(session['health_data'])
+        summary = session['health_data']
+        return render_template('health_assessment_summary.html', summary=summary)
+        # return render_template('health_assessment_height_weight.html')
 
     return render_template('health_assessment_temperature.html')
 

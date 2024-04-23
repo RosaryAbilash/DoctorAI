@@ -104,6 +104,26 @@
             window.location.href = link; 
         }
     </script>
+    <script>
+        window.onload = function() {
+            var selectedLanguage = "{{ session.get('language') }}"; // Get the selected language from the Flask session, defaulting to 'english'
+            var audioFilePath;
+            var audio;
+    
+            // Determine the audio file path based on the selected language
+            if (selectedLanguage === 'english') {
+                audioFilePath = "{{ url_for('static', filename='audio/ENG_EMER_1.mp3') }}";
+            } else if (selectedLanguage === 'tamil') {
+                audioFilePath = "{{ url_for('static', filename='audio/TAM_EMER_1.mp3') }}";
+            }
+    
+            // Create an Audio object with the selected audio file path and play it
+            audio = new Audio(audioFilePath);
+            audio.loop = true;
+            audio.play();
+    
+        };
+    </script>
     <!-- <script>
         function startVideoCall() {
             window.location.href = 'https://meet.google.com/ajh-xcwt-ukv'; 

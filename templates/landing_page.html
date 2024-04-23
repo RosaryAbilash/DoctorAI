@@ -74,12 +74,45 @@
         <img class="logo" src="{{ url_for('static', filename='DoctorAI_1.png') }}" alt="AI Healthcare Platform Logo">
     </header>
 
+    <form action="/" method="post">
+        <label for="language-select">Select AUDIO Language:</label>
+        <select id="language-select" name="language">
+            <option value="english">English</option>
+            <option value="tamil">Tamil</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+    
+
+
     <section>
         <a href="{{ url_for('dashboard') }}"><button class="signup-btn">Start Diagnosis</button></a>
         <a href="{{ url_for('emergency_connect') }}"><button class="emergency-btn">Emergency Connect</button></a>
         <a href="{{ url_for('about_us') }}"><button class="about-btn">About Us</button></a>
     </section>
     <footer>
-        <p>Copyright &copy; 2024 DoctorAI - Rural Healthcare with AI-Enabled Kiosks</p>
+        
+          
+        <p>Copyright &copy; 2024 DoctorAI - Rural Healthcare with AI-Enabled Kiosk</p>
     </footer>
+
+
+    <script>
+        window.onload = function() {
+            var selectedLanguage = "{{ session.get('language') }}"; // Get the selected language from the Flask session, defaulting to 'english'
+            var audioFilePath;
+    
+            // Determine the audio file path based on the selected language
+            if (selectedLanguage === 'english') {
+                audioFilePath = "{{ url_for('static', filename='audio/ENG_dash_1.mp3') }}";
+            } else if (selectedLanguage === 'tamil') {
+                audioFilePath = "{{ url_for('static', filename='audio/TAM_dash_1.mp3') }}";
+            }
+    
+            // Create an Audio object with the selected audio file path and play it
+            var audio = new Audio(audioFilePath);
+            audio.loop = true;
+            audio.play();
+        };
+    </script>
 {% endblock %}

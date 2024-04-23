@@ -204,17 +204,43 @@
 
 
     <script>
+        var selectedLanguage = "{{ session.get('language') }}"; // Get the selected language from the Flask session, defaulting to 'english'
+        var audio;
+
+
+            // Function to play end measure audio
+        function playEndMeasureAudio() {
+                // Stop any currently playing audio
+                if (audio) {
+                    audio.pause();
+                }
+                
+                var audioFilePath;
+                if (selectedLanguage === 'english') {
+                    audioFilePath = "{{ url_for('static', filename='audio/ENG_SEV_1.mp3') }}";
+                } else if (selectedLanguage === 'tamil') {
+                    audioFilePath = "{{ url_for('static', filename='audio/TAM_SEV_1.mp3') }}";
+                }
+                audio = new Audio(audioFilePath);
+                audio.loop = true;
+                audio.play();
+            }
+
+
+
         function selectSymptom(symptom) {
-    document.getElementById('selectedSymptom').innerHTML = 'Selected Symptom: ' + symptom;
-    document.getElementById('hiddenSymptom').value = symptom;
-    // checkFormCompletion();
+            document.getElementById('selectedSymptom').innerHTML = 'Selected Symptom: ' + symptom;
+            document.getElementById('hiddenSymptom').value = symptom;
+            
+            playEndMeasureAudio();
+            // checkFormCompletion();
 }
 
-function selectSeverity(severity) {
-    document.getElementById('selectedSeverity').innerHTML = 'Selected Severity: ' + severity;
-    document.getElementById('hiddenSeverity').value = severity;
-    checkFormCompletion();
-}
+        function selectSeverity(severity) {
+            document.getElementById('selectedSeverity').innerHTML = 'Selected Severity: ' + severity;
+            document.getElementById('hiddenSeverity').value = severity;
+            checkFormCompletion();
+        }
 
 function checkFormCompletion() {
     var symptom = document.getElementById('hiddenSymptom').value;
@@ -237,4 +263,24 @@ function otherSymptom(symptomId) {
         }
 
     </script>
+
+<script>
+    window.onload = function() {
+        var selectedLanguage = "{{ session.get('language') }}"; // Get the selected language from the Flask session, defaulting to 'english'
+        var audioFilePath;
+
+        // Determine the audio file path based on the selected language
+        if (selectedLanguage === 'english') {
+            audioFilePath = "{{ url_for('static', filename='audio/ENG_SYMP_1.mp3') }}";
+        } else if (selectedLanguage === 'tamil') {
+            audioFilePath = "{{ url_for('static', filename='audio/TAM_SYMP_1.mp3') }}";
+        }
+
+        // Create an Audio object with the selected audio file path and play it
+        audio = new Audio(audioFilePath);
+        audio.loop = true;
+        audio.play();
+
+    };
+</script>
 {% endblock %}

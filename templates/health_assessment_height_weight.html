@@ -100,7 +100,7 @@
 
         <!-- Input Form (Hidden initially) -->
         <form action="{{ url_for('height_weight_measurement') }}" method="post" id="height_weight_form" style="display: none;">
-            <!-- Add the 'name' attribute to input fields -->
+            
             <label for="height">Height:</label>
             <input type="text" id="height" name="height" required>
 
@@ -109,6 +109,64 @@
 
             <button type="submit" id="next_button">Next</button>
         </form>
+
+<!-- Input Form -->
+<form action="{{ url_for('height_weight_measurement') }}" method="post" id="height_weight_form">
+    <!-- Height -->
+    <label for="height">Height (cm):</label>
+    <div id="height_buttons">
+        <button type="button" onclick="decreaseHeight()">-</button>
+        <span id="height_display">160</span>
+        <button type="button" onclick="increaseHeight()">+</button>
+    </div>
+
+    <!-- Weight -->
+    <label for="weight">Weight (kg):</label>
+    <div id="weight_buttons">
+        <button type="button" onclick="decreaseWeight()">-</button>
+        <span id="weight_display">60</span>
+        <button type="button" onclick="increaseWeight()">+</button>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" id="next_button">Next</button>
+</form>
+
+<script>
+// Function to decrease height
+function decreaseHeight() {
+    var heightDisplay = document.getElementById('height_display');
+    var currentHeight = parseInt(heightDisplay.innerText);
+    if (currentHeight > 0) {
+        heightDisplay.innerText = currentHeight - 1;
+    }
+}
+
+// Function to increase height
+function increaseHeight() {
+    var heightDisplay = document.getElementById('height_display');
+    var currentHeight = parseInt(heightDisplay.innerText);
+    heightDisplay.innerText = currentHeight + 1;
+}
+
+// Function to decrease weight
+function decreaseWeight() {
+    var weightDisplay = document.getElementById('weight_display');
+    var currentWeight = parseInt(weightDisplay.innerText);
+    if (currentWeight > 0) {
+        weightDisplay.innerText = currentWeight - 1;
+    }
+}
+
+// Function to increase weight
+function increaseWeight() {
+    var weightDisplay = document.getElementById('weight_display');
+    var currentWeight = parseInt(weightDisplay.innerText);
+    weightDisplay.innerText = currentWeight + 1;
+}
+</script>
+
+
     </div>
 
     <script>
